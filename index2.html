@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP - Le Sport</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            padding: 1rem 0;
+            border-bottom: 2px solid #ff0000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        /* Contenu principal */
+        main {
+            margin-top: 80px;
+            padding: 2rem 5%;
+            flex: 1;
+            max-width: 1200px;
+            margin: 80px auto 0;
+            background-color: #111;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-decoration: underline;
+            text-decoration-color: #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff0000;
+            margin: 1.5rem 0 1rem;
+            text-decoration: underline;
+            text-decoration-color: #ff0000;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            color: #ddd;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 1rem 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        video {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 5px;
+            border: 3px solid #ff0000;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        /* Style pour les marques de motos */
+        .marque {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .marque h3 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin: 0 0 1rem;
+            text-align: left;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        .marque .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .marque p {
+            font-size: 1rem;
+            color: #dddddd;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .marque img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ff0000;
+        }
+
+        /* Pied de page */
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 2px solid #ff0000;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            main {
+                margin-top: 120px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .marque .content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .marque img {
+                height: 200px;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <nav>
+            <div class="logo">MotoGP</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index2.html" style="color: #ff0000;">Le Sport</a></li>
+                <li><a href="index3.html">Célébrités</a></li>
+                <li><a href="index4.html">Compétitions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <h1>Le Sport</h1>
+
+        <section>
+            <h2>Qu'est-ce que le MotoGP ?</h2>
+            <p>
+                Le MotoGP est la catégorie la plus prestigieuse des courses de motos de vitesse. C'est un championnat international où des pilotes professionnels conduisent des motos très puissantes spécialement conçues pour la compétition.
+                Les motos du MotoGP sont appelées prototypes, car elles sont développées par de grands constructeurs uniquement pour la course. Elles utilisent des technologies très avancées et peuvent atteindre des vitesses supérieures à 350 km/h.
+                Les courses se déroulent sur des circuits fermés et sécurisés. Les pilotes doivent faire preuve de grande précision, de rapidité et de maîtrise pour contrôler leur moto dans les virages et sur les lignes droites.
+                Le MotoGP est aujourd'hui l'un des sports mécaniques les plus populaires au monde et attire chaque année des millions de spectateurs passionnés de vitesse et de compétition.
+            </p>
+            <img src="image/【MotoGP】 ヤマハ：開幕戦 カタールGP 初日レポート.jpg" alt="MotoGP Yamaha" onerror="this.src='https://via.placeholder.com/800x400?text=MotoGP+Yamaha'">
+        </section>
+
+        <section>
+            <h2>Un sport spectaculaire</h2>
+            <p>
+                Le MotoGP est un sport impressionnant qui demande beaucoup de technique, de concentration et de courage.
+                Les pilotes doivent maîtriser leur moto à très grande vitesse tout en prenant des virages très serrés.
+                Ils doivent également avoir d'excellents réflexes et une grande précision pour contrôler leur moto dans toutes les situations.
+                Chaque course demande aussi une bonne stratégie et une parfaite coordination entre le pilote et son équipe.
+            </p>
+            <video width="600" controls>
+                <source src="image/video course.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        </section>
+
+        <!-- Section des marques de motos -->
+        <section>
+            <h2>Les marques de motos les plus célèbres</h2>
+
+            <!-- Ducati -->
+            <div class="marque">
+                <h3>🏍️ Ducati</h3>
+                <div class="content">
+                    <p>
+                        Ducati est un constructeur italien de motos haut de gamme, connu pour ses machines puissantes et élégantes. 
+                        En MotoGP, Ducati est réputée pour sa technologie innovante, notamment son système de traction et son moteur V4.
+                        L'équipe Ducati Corse a remporté de nombreux titres et continue de dominer les courses avec des pilotes comme Francesco Bagnaia et Enea Bastianini.
+                    </p>
+                    <img src="image/ducaati moto.jpg" alt="Ducati MotoGP" onerror="this.src='https://via.placeholder.com/800x400?text=Ducati+MotoGP'">
+                </div>
+            </div>
+
+            <!-- Yamaha -->
+            <div class="marque">
+                <h3>🏍️ Yamaha</h3>
+                <div class="content">
+                    <img src="image/yamaha moto.jpg" alt="Yamaha MotoGP" onerror="this.src='https://via.placeholder.com/800x400?text=Yamaha+MotoGP'">
+                    <p>
+                        Yamaha est un géant japonais de l'industrie motocycliste, présent en MotoGP depuis des décennies. 
+                        Connue pour ses motos équilibrées et fiables, Yamaha a produit des légendes comme Valentino Rossi et Fabio Quartararo.
+                        Le moteur en ligne de Yamaha est réputé pour sa douceur et sa performance, ce qui en fait un favori des pilotes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Honda -->
+            <div class="marque">
+                <h3>🏍️ Honda</h3>
+                <div class="content">
+                    <p>
+                        Honda est l'un des constructeurs les plus titrés en MotoGP, avec une histoire riche et de nombreux champions du monde.
+                        Leur moto RC213V est célèbre pour son agilité et sa puissance. Des légendes comme Marc Márquez et Mick Doohan ont fait les beaux jours de Honda en compétition.
+                    </p>
+                    <img src="image/honda moto.jpg" alt="Honda MotoGP" onerror="this.src='https://via.placeholder.com/800x400?text=Honda+MotoGP'">
+                </div>
+            </div>
+
+            <!-- KTM -->
+            <div class="marque">
+                <h3>🏍️ KTM</h3>
+                <div class="content">
+                    <img src="image/ktm moto.jpg" alt="KTM MotoGP" onerror="this.src='https://via.placeholder.com/800x400?text=KTM+MotoGP'">
+                    <p>
+                        KTM, le constructeur autrichien, est devenu un acteur majeur en MotoGP ces dernières années. 
+                        Connu pour son engagement dans le sport mécanique, KTM produit des motos agressives et performantes.
+                        Des pilotes comme Brad Binder et Jack Miller représentent fièrement la marque sur les circuits.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Aprilia -->
+            <div class="marque">
+                <h3>🏍️ Aprilia</h3>
+                <div class="content">
+                    <p>
+                        Aprilia, le constructeur italien, est célèbre pour ses motos innovantes et ses performances en compétition.
+                        La RS-GP d'Aprilia est une machine technologique de pointe, conçue pour rivaliser avec les meilleures.
+                        Avec des pilotes comme Aleix Espargaró, Aprilia continue de progresser dans le championnat MotoGP.
+                    </p>
+                    <img src="image/aprilia moto.jpg" alt="Aprilia MotoGP" onerror="this.src='https://via.placeholder.com/800x400?text=Aprilia+MotoGP'">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Origine des courses de MotoGP</h2>
+            <p>
+                Les courses de MotoGP ont une origine très ancienne qui remonte au début du XXe siècle, peu de temps après l'invention des premières motos.
+                À cette époque, les constructeurs voulaient montrer la puissance et la fiabilité de leurs machines, donc ils ont commencé à organiser des courses de vitesse entre motos.
+                Les premières compétitions apparaissent vers 1900 en Europe, surtout en Angleterre et en France. Les motos s'affrontaient sur des routes ouvertes ou sur de longs circuits.
+                Une des courses les plus célèbres de cette époque est le Isle of Man TT, créée en 1907 sur l'île de Man.
+                Cette course est encore aujourd'hui l'une des plus dangereuses et mythiques du sport motocycliste.
+            </p>
+            <img src="image/image.jpeg" alt="Course historique" onerror="this.src='https://via.placeholder.com/400x300?text=Course+historique'">
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>Tous droits réservés ©️ Projet LTI 2026. Créé par Coumba Seydi et Anta Ndiaye</p>
+    </footer>
+</body>
+</html>

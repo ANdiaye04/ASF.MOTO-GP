@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP - Pilotes Légendaires</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: #1a1a1a;
+            padding: 1rem 0;
+            border-bottom: 2px solid #ff0000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff0000;
+        }
+
+        /* Contenu principal */
+        main {
+            margin-top: 80px;
+            padding: 2rem 5%;
+            flex: 1;
+            max-width: 1200px;
+            margin: 80px auto 0;
+            background-color: #111;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-decoration: underline;
+            text-decoration-color: #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Grid des pilotes */
+        .pilotes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Cartes pilotes */
+        .pilote-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .pilote-card h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .pilote-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 2px solid #ff0000;
+        }
+
+        .pilote-card p {
+            line-height: 1.6;
+            color: #dddddd;
+            margin-bottom: 0;
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        .pilote-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff0000;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section légendes */
+        .section-title {
+            font-size: 2rem;
+            color: #ff0000;
+            text-align: center;
+            margin: 3rem 0 1rem;
+            text-decoration: underline;
+            text-decoration-color: #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Pied de page */
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 2px solid #ff0000;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .pilotes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .pilote-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .pilote-card {
+                padding: 1rem;
+            }
+
+            .pilote-card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MotoGP</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index2.html">Le Sport</a></li>
+                <li><a href="index3.html" style="color: #ff0000;">Célébrités</a></li>
+                <li><a href="index4.html">Compétitions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Pilotes Légendaires</h1>
+
+        <div class="pilotes-grid">
+            <!-- Francesco Bagnaia -->
+            <article class="pilote-card">
+                <div class="pilote-number">#1</div>
+                <h2>Francesco Bagnaia</h2>
+                <img src="image/𝘱𝘦𝘤𝘤𝘰 𝘣𝘢𝘨𝘯𝘢𝘪𝘢.jpg" alt="Francesco Bagnaia" onerror="this.src='https://via.placeholder.com/400x250?text=Francesco+Bagnaia'">
+                <p>
+                    Francesco Bagnaia est un pilote de moto italien né le 14 janvier 1997 à Turin, en Italie. Il est l'un des pilotes les plus talentueux de la génération actuelle en MotoGP.
+                    Il commence sa carrière dans les catégories inférieures et se fait remarquer par son talent. En 2018, il devient champion du monde de Moto2, ce qui lui permet d'accéder à la catégorie reine.
+                    Bagnaia pilote pour l'équipe Ducati et est connu pour sa grande précision et sa vitesse. Il remporte le championnat du monde MotoGP en 2022 et 2023, devenant l'un des meilleurs pilotes de son époque.
+                </p>
+            </article>
+
+            <!-- Fabio Quartararo -->
+            <article class="pilote-card">
+                <div class="pilote-number">#20</div>
+                <h2>Fabio Quartararo</h2>
+                <img src="image/télécharger (2).jpg" alt="Fabio Quartararo" onerror="this.src='https://via.placeholder.com/400x250?text=Fabio+Quartararo'">
+                <p>
+                    Fabio Quartararo est un pilote de moto français né le 20 avril 1999 à Nice. Il est considéré comme l'un des pilotes les plus talentueux de sa génération.
+                    En 2019, il arrive en MotoGP et se fait rapidement remarquer par sa vitesse. Il obtient plusieurs pole positions et victoires.
+                    En 2021, il devient champion du monde MotoGP, devenant ainsi le premier pilote français à remporter ce titre dans la catégorie reine. Cette victoire marque un moment historique pour le sport français.
+                </p>
+            </article>
+
+            <!-- Marc Marquez -->
+            <article class="pilote-card">
+                <div class="pilote-number">#93</div>
+                <h2>Marc Marquez</h2>
+                <img src="image/Marc Marquez.jpg" alt="Marc Marquez" onerror="this.src='https://via.placeholder.com/400x250?text=Marc+Marquez'">
+                <p>
+                    Marc Márquez est un pilote espagnol né le 17 février 1993 à Cervera. Il est considéré comme l'un des plus grands pilotes de l'histoire du MotoGP.
+                    En 2013, il arrive en MotoGP et devient champion du monde dès sa première saison, un exploit rare. Il est connu pour son style spectaculaire et sa capacité à prendre des risques.
+                    Il remporte plusieurs titres mondiaux et domine sa génération malgré plusieurs blessures graves qui ont marqué sa carrière.
+                </p>
+            </article>
+
+            <!-- Johann Zarco -->
+            <article class="pilote-card">
+                <div class="pilote-number">#5</div>
+                <h2>Johann Zarco</h2>
+                <img src="image/𝑗𝑜ℎ𝑎𝑛𝑛 𝑧𝑎𝑟𝑐𝑜.jpg" alt="Johann Zarco" onerror="this.src='https://via.placeholder.com/400x250?text=Johann+Zarco'">
+                <p>
+                    Johann Zarco est un pilote français né le 16 juillet 1990 à Cannes. Il est reconnu comme l'un des meilleurs pilotes français de sa génération.
+                    Il devient champion du monde Moto2 en 2015 et 2016, ce qui lui permet d'accéder au MotoGP. Il est connu pour sa régularité et son style agressif.
+                    Zarco a couru pour plusieurs équipes et continue de représenter la France au plus haut niveau, étant apprécié pour sa ténacité et son professionnalisme.
+                </p>
+            </article>
+        </div>
+
+        <!-- NOUVELLE SECTION : LES PREMIÈRES LÉGENDES -->
+        <h2 class="section-title">Les Premières Légendes du MotoGP</h2>
+
+        <div class="pilotes-grid">
+            <!-- Geoff Duke -->
+            <article class="pilote-card">
+                <div class="pilote-number">#3</div>
+                <h2>Geoff Duke</h2>
+                <img src="image/GeoffDuke photo.jpg" alt="Geoff Duke" onerror="this.src='https://via.placeholder.com/400x250?text=Geoff+Duke'">
+                <p>
+                    Geoff Duke (1923-2015), surnommé "The Duke", fut la première superstar internationale du motocyclisme dans les années 1950. Ce pilote britannique remporta 6 titres mondiaux (4 en 500cc et 2 en 350cc) entre 1951 et 1955. Il fut le premier à porter des combinaisons en cuir intégrales et révolutionna l'aérodynamisme. Duke domina avec Norton puis Gilera, marquant l'histoire par son élégance et sa précision de pilotage.
+                </p>
+            </article>
+
+            <!-- Mike Hailwood -->
+            <article class="pilote-card">
+                <div class="pilote-number">#4</div>
+                <h2>Mike Hailwood</h2>
+                <img src="image/hailwood photo.jpg" alt="Mike Hailwood" onerror="this.src='https://via.placeholder.com/400x250?text=Mike+Hailwood'">
+                <p>
+                    Mike "The Bike" Hailwood (1940-1981), légende britannique, accumula 9 titres mondiaux et 76 victoires en Grand Prix entre 1961 et 1967. Réputé pour sa polyvalence (il gagna dans toutes les catégories), son retour triomphal au TT de l'île de Man en 1978 après 11 ans d'absence reste gravé dans les mémoires. Son style fluide et sa capacité à dominer toutes les cylindrées en firent une icône intemporelle.
+                </p>
+            </article>
+
+            <!-- Giacomo Agostini -->
+            <article class="pilote-card">
+                <div class="pilote-number">#1</div>
+                <h2>Giacomo Agostini</h2>
+                <img src="image/agostini photo.jpg" alt="Giacomo Agostini" onerror="this.src='https://via.placeholder.com/400x250?text=Giacomo+Agostini'">
+                <p>
+                    Giacomo "Ago" Agostini (1942-), l'Italien aux 15 titres mondiaux (8 en 500cc et 7 en 350cc) et 122 victoires, domina les années 1960-1970. Pilote officiel MV Agusta puis Yamaha, il détient le record de titres consécutifs en 500cc (7 de 1966 à 1972). Sa rivalité avec Hailwood est légendaire. Agostini impressionnait par sa régularité et son professionnalisme, ne tombant que 3 fois en 13 saisons!
+                </p>
+            </article>
+
+            <!-- Phil Read -->
+            <article class="pilote-card">
+                <div class="pilote-number">#7</div>
+                <h2>Phil Read</h2>
+                <img src="image/phil_read photo.jpg" alt="Phil Read" onerror="this.src='https://via.placeholder.com/400x250?text=Phil+Read'">
+                <p>
+                    Phil "The Prince of Speed" Read (1939-2022), britannique, collectionna 7 titres mondiaux entre 1964 et 1974. Premier pilote à gagner dans 3 catégories (125cc, 250cc, 500cc), il fut le grand rival d'Agostini. Sa victoire au GP d'Allemagne 1976 à 37 ans en fait le plus vieux vainqueur en 500cc. Read marqua l'histoire par son intelligence de course et sa capacité à développer les motos.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>Tous droits réservés © Projet LTI 2026. Créé par Coumba Seydi et Anta Ndiaye</p>
+    </footer>
+</body>
+</html>

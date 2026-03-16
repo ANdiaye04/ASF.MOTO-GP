@@ -1,0 +1,227 @@
+/* --- CONFIGURATION GLOBALE --- */
+:root {
+    --primary: #ff0000; /* Rouge Course */
+    --gold: #d4af37;    /* Or pour le côté Noble */
+    --dark: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.1);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(255, 11, 52);
+    color: #2f2525;
+    font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Police futuriste */
+    line-height: 1.8;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--gold);
+    position: relative;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, var(--gold), #fff, var(--gold));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+    cursor: pointer;
+    transition: var(--transition);
+    scale: var(--glass);
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+
+
+.logo:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 15px var(--primary));
+}
+
+
+header {
+    background: linear-gradient(to bottom, #000, transparent);
+    padding: 2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* Logo au dessus du menu pour plus de grandeur */
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background: var(--glass);
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(244, 5, 5, 0.728);
+}
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    color: #fff6f6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: var(--transition);
+   
+}
+
+nav ul li a:hover {
+    color: var(--gold);
+    text-shadow: 0 0 10px var(--gold);
+}
+
+/* --- SECTIONS ET CARTES --- */
+main {
+    padding: 40px 10%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 80px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Style pour les vidéos et images */
+video, img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 15px;
+    border: 1px solid var(--glass);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    transition: var(--transition);
+}
+
+video:hover, img:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 50px;
+    text-align: center;
+    background: #000;
+    border-top: 1px solid var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {       }      
+    .logo { font-size: 1.5rem; letter-spacing: 4px; }
+    
+    nav ul {
+        flex-direction: column;
+        border-radius: 15px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    nav ul li { margin: 10px 0; }
+    
+    h1 { font-size: 2rem; }
+
+        
+
+.photos{
+display:flex;
+justify-content:center;
+gap:10px;
+}
+
+.photos img{
+width:10px;
+}    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.journal{
+columns: 4;
+column-gap: 30px;
+padding: 30px;
+}
+
+.journal img{
+width: 100%;
+margin: 10px 0;
+}
+
+.journal h2{
+break-inside: avoid;
+}
+
+.journal p{
+text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
